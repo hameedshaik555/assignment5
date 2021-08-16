@@ -1,0 +1,71 @@
+
+#include <stdio.h>
+#include<string.h>
+
+int delete(int arr[],int n)
+{
+    int brr[100],m;
+    printf(" for delete at any postion :");
+    scanf("%d",&m);
+    for(int i=0;i<n;i++)
+    {
+        if(i>=m)
+        brr[i]=arr[i+1];
+        else 
+        brr[i]=arr[i];
+    }
+    for(int i=0;i<n-1;i++)
+    printf("%d\n",brr[i]);
+}
+int insert(int arr[],int n)
+{
+    int brr[100],m ,a ;
+    printf("were we have to insert ");
+    scanf("%d%d",&m,&a);
+    for(int i=0;i<=n;i++)
+    {
+        if(i==m)
+        brr[i]=a;
+        else if(i>m)
+        brr[i]=arr[i-1];
+        else 
+        brr[i]=arr[i];
+        
+        
+    }
+    for (int i=0;i<=n;i++)
+    
+    
+    {
+        printf("%d",brr[i]);
+        
+    }
+}    
+    
+    int main()
+    {
+        int i,arr[100],n;
+        printf("enter no.of elements ");
+        scanf("%d",&n);
+        printf("array elements are ");
+        for(i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+        char ch;
+        scanf(" %c",&ch);
+        switch(ch)
+        {
+            case 'i':insert (arr,n);break;
+            case 'd':delete(arr ,n);break;
+            default :printf("enter given character");
+            
+      
+             
+        }
+        
+        
+        
+        
+    }
+    
+        
+
